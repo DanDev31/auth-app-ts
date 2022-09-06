@@ -1,13 +1,16 @@
 import { Typography } from "@mui/material"
-import AppTheme from "./theme/theme-provider.component"
+import { AppRouter } from "./router/app-router.component"
+import GlobalStyle from "./style/global.style"
+import { themes } from "./style/themes.style"
 
 
 function App() {
 
   return (
-    <AppTheme>
-      <Typography>Hola Mundo</Typography>
-    </AppTheme>
+    <>
+      <GlobalStyle bg={ themes.light.bg }/>
+      <AppRouter />
+    </>
   )
 }
 
